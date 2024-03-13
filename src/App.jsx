@@ -22,7 +22,7 @@ const App = () => {
   const handleDecrement = (counterId) => {
     const updatedCounters = counters.map((counter) => {
       if (counter.id === counterId) {
-        return counter.value>=1? { ...counter, value: counter.value - 1 }:{...counter,value:0};
+        return  { ...counter, value: counter.value - 1 };
       }
       return counter;
     });
