@@ -33,7 +33,7 @@ const App = () => {
   const totalCount = counters.reduce(
     (total, current) => total + current.value,
     0
-  );
+  )
 
   return (
     <div className=" flex items-center justify-center">
