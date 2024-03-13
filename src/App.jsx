@@ -22,7 +22,7 @@ const App = () => {
   const handleDecrement = (counterId) => {
     const updatedCounters = counters.map((counter) => {
       if (counter.id === counterId) {
-        return  { ...counter, value: counter.value - 1 };
+        return { ...counter, value: counter.value - 1 };
       }
       return counter;
     });
@@ -33,7 +33,7 @@ const App = () => {
   const totalCount = counters.reduce(
     (total, current) => total + current.value,
     0
-  )
+  );
 
   return (
     <div className=" flex items-center justify-center">
