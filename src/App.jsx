@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Count from "./components/Count";
 import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "./features/counters/countersSlice";
 
 const initialCounters = [
   { id: 1, value: 0 },
@@ -11,11 +12,11 @@ const App = () => {
   const counters = useSelector((state) => state.counters);
   console.log(counters)
   const handleIncrement = (counterId) => {
-
+    dispatch(increment(counterId));
   };
 
   const handleDecrement = (counterId) => {
-
+    dispatch(decrement(counterId));
   };
 
   const totalCount = counters.reduce(
