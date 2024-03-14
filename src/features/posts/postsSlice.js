@@ -8,16 +8,16 @@ const initialState = {
     error: null
 }
 
-export const fetchPosts = createAsyncThunk("posts/fetchPosts",async () => {
+export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
     const posts = await getPosts();
     return posts;
 })
 
 const postsSlice = createSlice({
-    name:"posts",
-    initialState:initialState,
-    reducers:{
-
+    name: "posts",
+    initialState: initialState,
+    extraReducers: (builder) => {
+        builder.addCase();
     }
 })
 
