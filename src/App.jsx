@@ -10,7 +10,6 @@ const initialCounters = [
 const App = () => {
   const dispatch = useDispatch();
   const counters = useSelector((state) => state.counters);
-  console.log(counters);
   const handleIncrement = (counterId) => {
     dispatch(increment(counterId));
   };
