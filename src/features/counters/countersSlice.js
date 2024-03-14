@@ -16,7 +16,7 @@ const counterSlice = createSlice({
             state[counterIndex].value--;
         }
     }
-})
+});
 
 
 export default counterSlice.reducer;
