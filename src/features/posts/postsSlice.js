@@ -29,9 +29,9 @@ const postsSlice = createSlice({
         builder.addCase(fetchPosts.rejected, (state, action) => {
             state.isLoading = false;
             state.isError = true;
-            state.error = action.error.message;
+            state.error = action.error?.message;
         })
     }
 })
 
-export default postsSlice.reducer;
+export default postsSlice.reducer
