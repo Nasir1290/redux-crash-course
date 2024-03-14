@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+import { getPosts } from "./postsApi"
 
 const initialState = {
     posts: [],
@@ -6,6 +7,11 @@ const initialState = {
     isError: false,
     error: null
 }
+
+export const fetchPosts = createAsyncThunk("posts/fetchPosts",async () => {
+    const posts = await getPosts();
+    return posts;
+})
 
 const postsSlice = createSlice({
     name:"posts",
