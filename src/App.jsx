@@ -8,7 +8,7 @@ const initialCounters = [
 ];
 const App = () => {
   const counters = useSelector((state) => state.counters);
-
+  console.log(counters)
   const handleIncrement = (counterId) => {
     const updatedCounters = counters.map((counter) => {
       if (counter.id === counterId) {
